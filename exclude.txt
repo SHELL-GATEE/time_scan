@@ -1,0 +1,2 @@
+/home/user1/public_html/dir1/file_to_exclude
+/home/user1/public_html/dir2_to_exclude
