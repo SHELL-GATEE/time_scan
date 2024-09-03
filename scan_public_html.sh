@@ -9,7 +9,7 @@ full_path=($(find /home -type d -name "$directory_to_search" 2> /dev/null))
 temp_file=$(mktemp)
 
 for path in "${full_path[@]}"; do
- find "$path" -depth -type f -mmin -$time_threshold 2> /dev/null >> "$temp_file"  
+ find "$path" -depth -type f -cmin -$time_threshold 2> /dev/null >> "$temp_file"  
 done
 
 if [[ -s "$temp_file" ]]; then 
